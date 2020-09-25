@@ -1,4 +1,10 @@
 var choosingLength = prompt("Between 8 to 128, select a length for your password.");
+var choosingLower = prompt("Would you like lower case letter? y/n");
+var choosingUpper = prompt("Would you like uppercase letters? y/n");
+var choosingNumbers = prompt("Would you like numbers? y/n");
+var choosingSpecialCharacters = prompt("Would you like special characters included? y/n")
+ 
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
