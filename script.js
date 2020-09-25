@@ -1,8 +1,8 @@
 var choosingLength = prompt("Between 8 to 128, select a length for your password.");
-var choosingLower = prompt("Would you like lower case letter? y/n");
-var choosingUpper = prompt("Would you like uppercase letters? y/n");
-var choosingNumbers = prompt("Would you like numbers? y/n");
-var choosingSpecialCharacters = prompt("Would you like special characters included? y/n")
+var choosingLower = confirm("Would you like lower case letter? y/n");
+var choosingUpper = confirm("Would you like uppercase letters? y/n");
+var choosingNumbers = confirm("Would you like numbers? y/n");
+var choosingSpecialCharacters = confirm("Would you like special characters included? y/n")
  
 
 // Assignment Code
@@ -22,11 +22,11 @@ function writePassword() {
 //var numbers [0,1,2,3,4,5,6,7,8,9];
 //var special [!,@,#,$,%,^,&,*,(,),_,+,=,~,`]; 
 
- 
+//ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+<>?:\"\}\{\~\`.,
 //Random generator
 function generatePassword() {
 
-
+    if (choosingLength) {
 
     var length = choosingLength;
         charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+<>?:\"\}\{\~\`.,",
@@ -36,5 +36,8 @@ function generatePassword() {
     }
     return retVal;
 }
+
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
