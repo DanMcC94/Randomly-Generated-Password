@@ -10,5 +10,15 @@ function writePassword() {
 
 }
 
+
+function generatePassword() {
+    var length = 128,
+        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+",
+        retVal = "";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));
+    }
+    return retVal;
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
