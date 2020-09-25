@@ -1,3 +1,4 @@
+var choosingLength = prompt("Between 8 to 128, select a length for your password.");
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -12,8 +13,8 @@ function writePassword() {
 
 
 function generatePassword() {
-    var length = 128,
-        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+",
+    var length = choosingLength;
+        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+<>?:\"\}\{\~\`.,",
         retVal = "";
     for (var i = 0, n = charset.length; i < length; ++i) {
         retVal += charset.charAt(Math.floor(Math.random() * n));
