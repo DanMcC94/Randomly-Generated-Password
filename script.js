@@ -1,8 +1,8 @@
 var choosingLength = prompt("Between 8 to 128, select a length for your password.");
-var choosingLower = confirm("Would you like lower case letter? y/n");
-var choosingUpper = confirm("Would you like uppercase letters? y/n");
-var choosingNumbers = confirm("Would you like numbers? y/n");
-var choosingSpecialCharacters = confirm("Would you like special characters included? y/n")
+var choosingLower = confirm("Would you like lower case letter?");
+var choosingUpper = confirm("Would you like uppercase letters?");
+var choosingNumbers = confirm("Would you like numbers?");
+var choosingSpecialCharacters = confirm("Would you like special characters included?")
  
 
 // Assignment Code
@@ -26,16 +26,26 @@ function writePassword() {
 //Random generator
 function generatePassword() {
 
-    if (choosingLength) {
+    if (choosingLower) {
 
     var length = choosingLength;
-        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+<>?:\"\}\{\~\`.,",
+        charset = "abcdefghijklmnopqrstuvwxyz",
         retVal = "";
     for (var i = 0, n = charset.length; i < length; ++i) {
         retVal += charset.charAt(Math.floor(Math.random() * n));
     }
     return retVal;
 }
+    else {
+    
+    var length = choosingLength;
+        charset = "QWERTYUIOPASDFGHJKLZXCVBNM",
+        retVal = "";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+            retVal += charset.charAt(Math.floor(Math.random() * n));
+        }
+    return retVal;
+    }
 
 }
 
